@@ -4,11 +4,11 @@
             <img src="@/assets/logo.svg" alt="">
         </router-link>
         <div>
-            <router-link to="/features">Features</router-link>
+            <router-link to="/features" class='link'>Features</router-link>
             <br>
-            <router-link to="/board">Board</router-link>
+            <router-link to="/board" class='link'>Board</router-link>
             <br>
-            <router-link to="/contact">Contact</router-link>
+            <router-link to="/contact" class='link'>Contact</router-link>
         </div>
     </nav>
 </template>
