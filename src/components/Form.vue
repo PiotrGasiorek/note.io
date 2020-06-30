@@ -30,7 +30,7 @@
                 this.errorExist = false
                 const details = this.getDetails();
 
-                this.$emit('addNewNote', { title: this.note, time: details[1], date: details[0],id: Math.random() });
+                this.$emit('addNewNote', { "title": this.note, "time": details[1], "date": details[0], "id": Math.random() });
                 this.clearForm();
             },
 
