@@ -1,12 +1,73 @@
-@use "sass:map"
+  
+$colors--primary: #202020
+$colors--secondary: #FFFFFF
+$colors--tertiary: #D7D7D7
+$colors--quaternary: #B71010
+
+$font-families--primary: "DM Serif Display"
+$font-families--secondary: "Prompt" 
+
+$font-weights--bold: 600
+$font-weights--regular: 400
+
+
+$font-sizes--xl: 50px
+$font-sizes--lg: 31px
+$font-sizes--md: 20px
+$font-sizes--xs: 16px
+
+$margins--md: 50px
+
+.title
+    font-family: $font-families--primary
+    color: $colors--secondary
+    padding-bottom: 1em
+
+    &--lg
+        font-size: $font-sizes--xl
     
-$colors: ("primary": #202020, "secondary": #FFFFFF, "tertiary": #D7D7D7, 'quaternary': #B71010)
 
-$font-families: ("primary": "DM Serif Display", "secondary": "Prompt")
+.btn
+    font-family: $font-families--secondary
+    padding: 15px 40px
+    border-radius: 0px
+    border: 2px solid $colors--secondary
+    background-color: transparent
+    font-size: 16px
+    font-weight: $font-weights--bold
+    
+    &:focus
+        outline: none
 
-$font-weights: ("bold": "600", "regular": "400")
+    &:hover
+        cursor: pointer
+        background-color: $colors--quaternary
+        border-color: $colors--quaternary
 
+.link
+    font-family: $font-families--secondary
+    font-size: 16px
+    font-weight: $font-weights--bold
 
-$font-sizes: ("xl": "50px", "l": "31px", "md": "20px", "xs": "16px")
+.input
+    background: transparent
+    border: none
+    border-radius: 0px
+    border-bottom: 2px solid transparent
+    font-family: $font-families--secondary
+    font-weight: $font-weights--regular
+    font-size: 20px
+    padding: 5px 10px
 
-$margins: ("md": "50px")
+    &:focus
+        outline: none
+        border-bottom: 2px solid $colors--secondary
+
+.submit
+    width: 42.15px
+    height: 42.15px
+    border: none
+    border-radius: 0px
+    color: $colors--primary
+    font-size: 30px
+    line-height: 0px
