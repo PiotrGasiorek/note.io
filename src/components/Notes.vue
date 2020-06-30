@@ -1,13 +1,13 @@
 <template>
     <div class='notes'>
-        <div v-bind:key="note.id" v-for="note in notes">
+        <div :key="note.id" v-for="note in notes">
             <Note v-bind:note="note"/>
         </div>
     </div>
 </template>
 
 <script>
-  import Note from '@/components/Note';
+    import Note from '@/components/Note';
 
     export default {
         name: 'Notes',
