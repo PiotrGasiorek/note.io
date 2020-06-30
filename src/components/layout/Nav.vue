@@ -14,22 +14,22 @@
 </template>
 
 <script>
-export default {
-    name: 'Nav',
-}
+    export default {
+        name: 'Nav',
+    }
 </script>
 
 <style scoped lang='sass'>
-nav
-    width: 100%
-    display: flex
-    height: 50px
-    align-items: center
-
-    div
+    nav
+        width: 100%
         display: flex
-        margin-left: auto
+        height: 50px
+        align-items: center
 
-        *
-            padding: 0 0 0 20px
+        div
+            display: flex
+            margin-left: auto
+
+            *
+                padding: 0 0 0 60px
 </style>
