@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent='submitForm'>
+    <form @submit.prevent='submitForm' v-on:keyup.enter='submitForm'>
         <input v-bind:class="[errorExist ? 'error' : '', 'input']" type="text" placeholder="Type here..." v-model='note'>
         <button class="submit" type='submit'>+</button>
     </form>
