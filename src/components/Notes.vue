@@ -1,7 +1,7 @@
 <template>
     <div class='notes'>
         <div :key="note.id" v-for="note in notes">
-            <Note v-bind:note="note"/>
+            <Note v-bind:note="note" @note-deleted="deleteNote"/>
         </div>
     </div>
 </template>
@@ -14,6 +14,11 @@
         props: ['notes'],
         components: {
             Note
+        },
+        methods: {
+            deleteNote(id) {
+                this.$emit('note-deleted', id);
+            }
         },
     }
 </script>

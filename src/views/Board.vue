@@ -4,7 +4,7 @@
       Notes board
     </h1>
     <Form @addNewNote="addNewNote"/>
-    <Notes :notes="notes"/>
+    <Notes :notes="notes" @note-deleted="deleteNote"/>
   </header>
 </template>
 
@@ -25,50 +25,13 @@
     },
     methods: {
       addNewNote(note) {
-        this.postData(note);
-      },
-      getData() {
-        const url = "https://my-json-server.typicode.com/PiotrGasiorek/note.io.api/notes";
-        let options = {
-          method: "GET",
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          }
-        };
-
-        fetch(url, options)
-          .then(data => data.json())
-          .then(data => {
-            data.forEach(note => {
-              this.notes.unshift(note)
-            });
-            console.log(this.notes);
-          })
-          .catch(err => console.log(err))
-      },
-      postData(note) {
-        const url = "https://my-json-server.typicode.com/PiotrGasiorek/note.io.api/notes";
-        let options = {
-          method: 'POST',
-          body: JSON.stringify(note),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8"
-          }
-        };
-
-        fetch(url, options)
-          .then(data => data.json())
-          .then(data => console.log(data.title))
-          .catch(err => console.log(err))
-        
         this.notes.unshift(note);
-        this.getData();
       },
-      
-    }, 
-    beforeMount() {
-      this.getData();
+      deleteNote(id) {
+        this.notes = this.notes.filter(note => {
+          return note.id !== id;
+        })
+      },
     },
   }
 
