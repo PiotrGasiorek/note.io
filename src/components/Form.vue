@@ -90,4 +90,9 @@
 
     .error
         border-bottom-color: #B71010
+
+    @media only screen and (max-width: 480px) 
+        .input
+            width: calc(100% - 42.15px) !important
+
 </style>
