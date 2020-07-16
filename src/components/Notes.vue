@@ -30,4 +30,5 @@
 <style lang="sass" scoped>
     .notes
         margin-top: 50px
+        overflow: auto
 </style>

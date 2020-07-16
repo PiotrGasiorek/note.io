@@ -95,7 +95,20 @@
             &:focus
                 outline: none
                 
+    @media only screen and (max-width: 800px) 
+        .note 
+            width: 120vw
 
+            &__title
+                width: 80vw
+
+    @media only screen and (max-width: 480px) 
+        .note 
+            width: 120vw
+
+            &__title
+                width: 60vw
+        
                 
 
 </style>
