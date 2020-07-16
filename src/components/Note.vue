@@ -97,18 +97,16 @@
                 
     @media only screen and (max-width: 800px) 
         .note 
-            width: 120vw
+            width: 150vw
 
             &__title
-                width: 80vw
+                min-width: 80vw
+                padding-right: 30px
 
-    @media only screen and (max-width: 480px) 
-        .note 
-            width: 120vw
+            &__details
+                width: 70vw
 
-            &__title
-                width: 60vw
-        
+  
                 
 
 </style>
