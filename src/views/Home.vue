@@ -8,7 +8,7 @@
         <router-link to="/board" class='btn'>Start for free</router-link>
       </div>
       <div class="">
-        <img :src='image' alt="">
+        <img :src='Marcus_Aurelius' alt="">
       </div>
     </div>
   </header>
@@ -22,7 +22,7 @@
     name: 'Home',
     data: function () {
         return {
-            image: Marcus_Aurelius
+            Marcus_Aurelius: Marcus_Aurelius
         }
     }
   }
