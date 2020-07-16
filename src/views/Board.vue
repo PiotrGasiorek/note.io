@@ -4,7 +4,7 @@
       Notes board
     </h1>
     <Form @addNewNote="addNewNote"/>
-    <Notes :notes="notes" @note-deleted="deleteNote"/>
+    <Notes :notes="notes" @note-deleted="deleteNote" @status-changed="statusChanged"/>
   </header>
 </template>
 
@@ -32,6 +32,15 @@
           return note.id !== id;
         })
       },
+
+      statusChanged(id) {
+        this.notes.map(note => {
+          if(note.id === id){
+            note.done = !note.done
+          }
+          console.log(note.done);
+        })
+      }
     },
   }
 

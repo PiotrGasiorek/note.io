@@ -30,7 +30,7 @@
                 this.errorExist = false
                 const details = this.getDetails();
 
-                this.$emit('addNewNote', { "title": this.note, "time": details[1], "date": details[0], "id": Math.random() });
+                this.$emit('addNewNote', { "title": this.note, "time": details[1], "date": details[0], "id": Math.random(), "done": false });
                 this.clearForm();
             },
 
@@ -59,6 +59,35 @@
 </script>
 
 <style scoped lang="sass">
+    form
+        display: flex
+
+    .input
+        background: transparent
+        border: none
+        border-radius: 0px
+        border-bottom: 2px solid transparent
+        font-family: $font-families--secondary
+        font-weight: $font-weights--regular
+        font-size: 20px
+        padding: 5px 10px
+
+        &:focus
+            outline: none
+            border-bottom: 2px solid $colors--secondary
+
+    .submit
+        width: 42.15px
+        height: 42.15px
+        border: none
+        border-radius: 0px
+        color: $colors--primary
+        font-size: 30px
+        line-height: 0px
+
+        &:focus
+            outline: none
+
     .error
         border-bottom-color: #B71010
 </style>
